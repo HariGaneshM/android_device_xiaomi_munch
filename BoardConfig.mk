@@ -198,3 +198,6 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit from the proprietary version
 include vendor/xiaomi/munch/BoardConfigVendor.mk
+
+# Inherit Firmware
+-include vendor/xiaomi/munch-firmware/BoardConfigVendor.mk
