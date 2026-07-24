@@ -14,10 +14,10 @@ $(call inherit-product, hardware/qcom-caf/common/common.mk)
 $(call inherit-product-if-exists, vendor/xiaomi/miuicamera/miuicamera.mk)
 
 # Call the Dolby setup
-TARGET_USES_DOLBY := true
-ifeq ($(TARGET_USES_DOLBY),true)
-$(call inherit-product, hardware/dolby/dolby.mk)
-endif
+# TARGET_USES_DOLBY := true
+# ifeq ($(TARGET_USES_DOLBY),true)
+# $(call inherit-product, hardware/dolby/dolby.mk)
+# endif
 
 # Private key for signed build
 -include vendor/private-keys/keys/keys.mk
