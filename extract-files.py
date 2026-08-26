@@ -32,6 +32,11 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libaudioroute.so', 'libaudioroute-v34.so'),
     'vendor/lib64/camera/components/com.mi.node.watermark.so': blob_fixup()
         .add_needed('libpiex_shim.so'),
+    'vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so': blob_fixup()
+        .binary_regex_replace(
+            b'\x9A\x0A\x00\x94',
+            b'\x1F\x20\x03\xD5'
+        ),
     (
         'vendor/lib64/libMIAIHDRhvx_interface.so',
         'vendor/lib64/libarcsoft_hdrplus_hvx_stub.so',
